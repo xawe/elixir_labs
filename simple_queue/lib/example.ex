@@ -44,8 +44,11 @@ defmodule Example do
         {:ok, "hello"} -> IO.puts("World")
         {:ok} -> IO.puts "Não houve nenhuma informação no recebimento"
         {:sum, [a, b]} ->
+          :timer.sleep(2000)
           IO.puts("Somando os valores recebidos")
+          :timer.sleep(2000)
           IO.puts(add(a, b))
+          :timer.sleep(2000)
       end
       listen()
     end
